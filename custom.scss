@@ -1,0 +1,21 @@
+/*-- scss:defaults --*/
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+$presentation-heading-font: "Oxygen", sans-serif;
+
+/*-- scss:rules --*/
+.reveal .quarto-title-block .title,
+.reveal .title-slide h1,
+.reveal .title-slide .title,
+h2,
+p,
+li {
+  font-family: "Oxygen", sans-serif !important;
+  color: #23402E !important; 
+}
+
+.reveal .quarto-title-block .author,
+.reveal .quarto-title-block .quarto-title-author-name {
+  font-family: "Oxygen", sans-serif !important;
+  color: #23402E !important;
+}
