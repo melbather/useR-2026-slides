@@ -217,12 +217,20 @@ Melissa Bather
 </section>
 <section id="definitions" class="slide level2" data-background-image="img/bg.png" data-background-opacity="0.7">
 <h2>Definitions</h2>
-<p>N = The total number of animals… but where? A = The survey region Density = N/A</p>
+<p>(could delete this?)</p>
+<p>N = The total number of animals… but where?</p>
+<p>A = The survey region</p>
+<p>Density = N/A</p>
+</section>
+<section>
+<section id="spatially-explicit-capture-recapture-secr" class="title-slide slide level1 center" data-background-image="img/bg.png" data-background-opacity="0.7">
+<h1>Spatially explicit capture-recapture (SECR)</h1>
+
 </section>
 <section id="section" class="slide level2" data-background-image="img/bg.png" data-background-opacity="0.7">
 <h2></h2>
 
-<img data-src="img/butterfly.png" class="r-stretch"></section>
+<img data-src="img/butterfly.png" class="r-stretch"></section></section>
 <section id="section-1" class="title-slide slide level1 center" data-background-image="img/bg.png" data-background-opacity="0.7">
 <h1></h1>
 
@@ -274,8 +282,17 @@ Melissa Bather
 <h2>Binary capture history</h2>
 
 <img data-src="img/bincapt4.png" class="r-stretch"></section>
-<section id="relevant-packages" class="slide level2 smaller" data-background-image="img/bg.png" data-background-opacity="0.7">
-<h2>Relevant packages</h2>
+<section id="detection-methods" class="slide level2" data-background-image="img/bg.png" data-background-opacity="0.7">
+<h2>Detection methods</h2>
+<ul>
+<li>Physical traps</li>
+<li>Microphones</li>
+<li>Cameras</li>
+<li>Hair snares</li>
+</ul>
+</section>
+<section id="relevant-r-packages" class="slide level2 smaller" data-background-image="img/bg.png" data-background-opacity="0.7">
+<h2>Relevant <code>R</code> packages</h2>
 <h3 id="secr"><code>secr</code></h3>
 <p><strong>Authors</strong>: Murray Efford, Philipp Jund, David Fletcher</p>
 <p>https://www.otago.ac.nz/density/</p>
@@ -349,7 +366,13 @@ Melissa Bather
 <section id="visualize-the-study-area" class="slide level2" data-background-image="img/bg.png" data-background-opacity="0.7">
 <h2>Visualize the study area</h2>
 <p><em>Code from the <code>secr</code> vignette</em></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="fu">plot</span>(possummask)</span>
+<span id="cb6-2"><a href=""></a><span class="fu">plot</span>(possumCH, <span class="at">tracks =</span> <span class="cn">TRUE</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb6-3"><a href=""></a><span class="fu">plot</span>(<span class="fu">traps</span>(possumCH), <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb6-4"><a href=""></a><span class="fu">lines</span>(possumarea)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
+</div>
 <img data-src="slides_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
 <section id="detection-function" class="slide level2" data-background-image="img/bg.png" data-background-opacity="0.7">
 <h2>Detection Function</h2>
@@ -379,11 +402,11 @@ Melissa Bather
 <section id="creating-a-null-model" class="slide level2" data-background-image="img/bg.png" data-background-opacity="0.7">
 <h2>Creating a Null Model</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a>possum.null <span class="ot">&lt;-</span> <span class="fu">secr.fit</span>(<span class="at">capthist =</span> possumCH, <span class="at">model =</span> <span class="fu">list</span>(D<span class="sc">~</span><span class="dv">1</span>, g0<span class="sc">~</span><span class="dv">1</span>, sigma<span class="sc">~</span><span class="dv">1</span>), <span class="at">mask =</span> possummask, <span class="at">trace =</span> F)</span>
-<span id="cb6-2"><a href=""></a><span class="fu">summary</span>(possum.null)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a>possum.null <span class="ot">&lt;-</span> <span class="fu">secr.fit</span>(<span class="at">capthist =</span> possumCH, <span class="at">model =</span> <span class="fu">list</span>(D<span class="sc">~</span><span class="dv">1</span>, g0<span class="sc">~</span><span class="dv">1</span>, sigma<span class="sc">~</span><span class="dv">1</span>), <span class="at">mask =</span> possummask, <span class="at">trace =</span> F)</span>
+<span id="cb7-2"><a href=""></a><span class="fu">summary</span>(possum.null)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$versiontime
-[1] "5.4.3, run 11:40:48 30 Jun 2026, elapsed 1.26 s"
+[1] "5.4.3, run 10:15:16 02 Jul 2026, elapsed 1.42 s"
 
 $traps
  Detector Number Spacing UsagePct
@@ -407,17 +430,32 @@ $AICtable
 
 $coef
             beta    SE.beta        lcl        ucl
-D      0.5257889 0.10283189  0.3242421  0.7273357
-g0    -1.4355010 0.14061267 -1.7110967 -1.1599052
-sigma  3.9415021 0.04963035  3.8442284  4.0387758
+D      0.5257905 0.10283186  0.3242437  0.7273372
+g0    -1.4355079 0.14061999 -1.7111180 -1.1598978
+sigma  3.9415034 0.04963069  3.8442290  4.0387777
 
 $predicted
-       link  estimate SE.estimate        lcl        ucl
-D       log  1.691793  0.17443120  1.3829821  2.0695594
-g0    logit  0.192243  0.02183513  0.1530215  0.2386845
-sigma   log 51.495894  2.55733389 46.7226186 56.7568176</code></pre>
+       link   estimate SE.estimate        lcl        ucl
+D       log  1.6917957  0.17443142  1.3829844  2.0695625
+g0    logit  0.1922419  0.02183617  0.1530188  0.2386859
+sigma   log 51.4959604  2.55735447 46.7226478 56.7569277</code></pre>
 </div>
 </div>
+</section>
+<section id="thank-you" class="slide level2" data-background-image="img/bg.png" data-background-opacity="0.7">
+<h2>Thank you!</h2>
+<p>Find these slides at: https://github.com/melbather/useR-2026-slides</p>
+<p>Find me at: https://statisticsmelissa.netlify.app</p>
+</section>
+<section id="references" class="slide level2" data-background-image="img/bg.png" data-background-opacity="0.7">
+<h2>References</h2>
+<p>(to be formatted)</p>
+<p>https://www.otago.ac.nz/density/</p>
+<p>https://github.com/MurrayEfford/secr/</p>
+<p>https://www.stats.otago.ac.nz/secrapp/</p>
+<p>https://github.com/b-steve/ascr</p>
+<p>https://github.com/b-steve/acre</p>
+<p>https://www.otago.ac.nz/density/pdfs/secr-habitatmasks.pdf</p>
 
 </section></section>
     </div>

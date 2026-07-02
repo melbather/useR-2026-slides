@@ -17,9 +17,15 @@ title-slide-attributes:
 
 ## Definitions {background-image="img/bg.png" background-opacity="0.7"}
 
+(could delete this?)
+
 N = The total number of animals… but where?
+
 A = The survey region
+
 Density = N/A
+
+# Spatially explicit capture-recapture (SECR) {background-image="img/bg.png" background-opacity="0.7"}
 
 ## {background-image="img/bg.png" background-opacity="0.7"}
 ![](img/butterfly.png)
@@ -61,8 +67,15 @@ Density = N/A
 
 ![](img/bincapt4.png)
 
+## Detection methods {background-image="img/bg.png" background-opacity="0.7"}
 
-## Relevant packages {background-image="img/bg.png" background-opacity="0.7" .smaller}
+- Physical traps
+- Microphones
+- Cameras
+- Hair snares
+
+
+## Relevant `R` packages {background-image="img/bg.png" background-opacity="0.7" .smaller}
 
 ### `secr`
 
@@ -148,6 +161,7 @@ head(possumarea)
 *Code from the `secr` vignette*
 
 ```{r}
+#| echo: true
 plot(possummask)
 plot(possumCH, tracks = TRUE, add = TRUE)
 plot(traps(possumCH), add = TRUE)
@@ -199,3 +213,28 @@ ggplot() +
 possum.null <- secr.fit(capthist = possumCH, model = list(D~1, g0~1, sigma~1), mask = possummask, trace = F)
 summary(possum.null)
 ```
+
+## Thank you! {background-image="img/bg.png" background-opacity="0.7"}
+
+Find these slides at: https://github.com/melbather/useR-2026-slides
+
+Find me at: https://statisticsmelissa.netlify.app
+
+## References {background-image="img/bg.png" background-opacity="0.7"}
+
+(to be formatted)
+
+https://www.otago.ac.nz/density/
+
+https://github.com/MurrayEfford/secr/ 
+
+https://www.stats.otago.ac.nz/secrapp/
+
+https://github.com/b-steve/ascr
+
+https://github.com/b-steve/acre
+
+https://www.otago.ac.nz/density/pdfs/secr-habitatmasks.pdf
+
+
+
