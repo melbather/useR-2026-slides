@@ -200,7 +200,12 @@ ggplot() +
 
 ```{r}
 #| echo: true
-possum.null <- secr.fit(capthist = possumCH, model = list(D~1, g0~1, sigma~1), mask = possummask, trace = F)
+possum.null <- secr.fit(
+  capthist = possumCH, 
+  model = list(D~1, g0~1, sigma~1), 
+  mask = possummask, 
+  trace = F
+  )
 summary(possum.null)
 ```
 
