@@ -15,16 +15,6 @@ title-slide-attributes:
 - Tiny animals or camouflaging animals can be very difficult to spot
 - Double counting can be hard to avoid when relying on our sight alone 
 
-## Definitions {background-image="img/bg.png" background-opacity="0.7"}
-
-(could delete this?)
-
-N = The total number of animals… but where?
-
-A = The survey region
-
-Density = N/A
-
 # Spatially explicit capture-recapture (SECR) {background-image="img/bg.png" background-opacity="0.7"}
 
 ## {background-image="img/bg.png" background-opacity="0.7"}
@@ -89,7 +79,7 @@ https://www.stats.otago.ac.nz/secrapp/
 
 ### `ascr`
 
-**Authors**: Ben Stevenson, ??
+**Author**: Ben Stevenson
 
 https://github.com/b-steve/ascr
 
@@ -216,25 +206,24 @@ summary(possum.null)
 
 ## Thank you! {background-image="img/bg.png" background-opacity="0.7"}
 
-Find these slides at: https://github.com/melbather/useR-2026-slides
+Find these slides at: https://melbather.github.io/useR-2026-slides
 
 Find me at: https://statisticsmelissa.netlify.app
 
-## References {background-image="img/bg.png" background-opacity="0.7"}
+## References {background-image="img/bg.png" background-opacity="0.7" .smaller}
 
-(to be formatted)
+1. Borchers, D. and Efford, M. (2008). *Spatially explicit maximum likelihood methods for capture–recapture studies.* Biometrics 64: 377-385.
 
-https://www.otago.ac.nz/density/
+2. Efford, M. (2025) *secr: Spatially explicit capture–recapture models.* R package version 5.3.0.
 
-https://github.com/MurrayEfford/secr/ 
+3. Stevenson, B., Reps, J., Hao, L. (2026, April 14). *acre*. GitHub. https://github.com/b-steve/acre
 
-https://www.stats.otago.ac.nz/secrapp/
+4. Stevenson, B. (2025, July 9). *ascr*. GitHub. https://github.com/b-steve/ascr.
 
-https://github.com/b-steve/ascr
+5. University of Otago, New Zealand. (2026, May 28). *Software for spatially explicit capture–recapture*. https://www.otago.ac.nz/density/
 
-https://github.com/b-steve/acre
 
-https://www.otago.ac.nz/density/pdfs/secr-habitatmasks.pdf
+*Presentation made with Quarto*
 
 
 

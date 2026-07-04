@@ -215,13 +215,6 @@ Melissa Bather
 <li>Double counting can be hard to avoid when relying on our sight alone</li>
 </ul>
 </section>
-<section id="definitions" class="slide level2" data-background-image="img/bg.png" data-background-opacity="0.7">
-<h2>Definitions</h2>
-<p>(could delete this?)</p>
-<p>N = The total number of animals… but where?</p>
-<p>A = The survey region</p>
-<p>Density = N/A</p>
-</section>
 <section>
 <section id="spatially-explicit-capture-recapture-secr" class="title-slide slide level1 center" data-background-image="img/bg.png" data-background-opacity="0.7">
 <h1>Spatially explicit capture-recapture (SECR)</h1>
@@ -299,7 +292,7 @@ Melissa Bather
 <p>https://github.com/MurrayEfford/secr/</p>
 <p>https://www.stats.otago.ac.nz/secrapp/</p>
 <h3 id="ascr"><code>ascr</code></h3>
-<p><strong>Authors</strong>: Ben Stevenson, ??</p>
+<p><strong>Author</strong>: Ben Stevenson</p>
 <p>https://github.com/b-steve/ascr</p>
 <h3 id="acre"><code>acre</code></h3>
 <p><strong>Authors</strong>: Ben Stevenson, Joseph Reps, Lingyu Hao</p>
@@ -406,7 +399,7 @@ Melissa Bather
 <span id="cb7-2"><a href=""></a><span class="fu">summary</span>(possum.null)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$versiontime
-[1] "5.4.3, run 10:15:16 02 Jul 2026, elapsed 1.42 s"
+[1] "5.4.3, run 13:28:37 04 Jul 2026, elapsed 1.2 s"
 
 $traps
  Detector Number Spacing UsagePct
@@ -429,33 +422,34 @@ $AICtable
  D~1 g0~1 sigma~1 halfnormal    3 -1097.107 2200.214 2200.437
 
 $coef
-            beta    SE.beta        lcl        ucl
-D      0.5257905 0.10283186  0.3242437  0.7273372
-g0    -1.4355079 0.14061999 -1.7111180 -1.1598978
-sigma  3.9415034 0.04963069  3.8442290  4.0387777
+            beta   SE.beta       lcl        ucl
+D      0.5257891 0.1028264  0.324253  0.7273251
+g0    -1.4354971 0.1406398 -1.711146 -1.1598482
+sigma  3.9415015 0.0496313  3.844226  4.0387770
 
 $predicted
        link   estimate SE.estimate        lcl        ucl
-D       log  1.6917957  0.17443142  1.3829844  2.0695625
-g0    logit  0.1922419  0.02183617  0.1530188  0.2386859
-sigma   log 51.4959604  2.55735447 46.7226478 56.7569277</code></pre>
+D       log  1.6917932  0.17442189  1.3829971  2.0695375
+g0    logit  0.1922436  0.02183939  0.1530151  0.2386949
+sigma   log 51.4958621  2.55738135 46.7225022 56.7568878</code></pre>
 </div>
 </div>
 </section>
 <section id="thank-you" class="slide level2" data-background-image="img/bg.png" data-background-opacity="0.7">
 <h2>Thank you!</h2>
-<p>Find these slides at: https://github.com/melbather/useR-2026-slides</p>
+<p>Find these slides at: https://melbather.github.io/useR-2026-slides</p>
 <p>Find me at: https://statisticsmelissa.netlify.app</p>
 </section>
-<section id="references" class="slide level2" data-background-image="img/bg.png" data-background-opacity="0.7">
+<section id="references" class="slide level2 smaller" data-background-image="img/bg.png" data-background-opacity="0.7">
 <h2>References</h2>
-<p>(to be formatted)</p>
-<p>https://www.otago.ac.nz/density/</p>
-<p>https://github.com/MurrayEfford/secr/</p>
-<p>https://www.stats.otago.ac.nz/secrapp/</p>
-<p>https://github.com/b-steve/ascr</p>
-<p>https://github.com/b-steve/acre</p>
-<p>https://www.otago.ac.nz/density/pdfs/secr-habitatmasks.pdf</p>
+<ol type="1">
+<li><p>Borchers, D. and Efford, M. (2008). <em>Spatially explicit maximum likelihood methods for capture–recapture studies.</em> Biometrics 64: 377-385.</p></li>
+<li><p>Efford, M. (2025) <em>secr: Spatially explicit capture–recapture models.</em> R package version 5.3.0.</p></li>
+<li><p>Stevenson, B., Reps, J., Hao, L. (2026, April 14). <em>acre</em>. GitHub. https://github.com/b-steve/acre</p></li>
+<li><p>Stevenson, B. (2025, July 9). <em>ascr</em>. GitHub. https://github.com/b-steve/ascr.</p></li>
+<li><p>University of Otago, New Zealand. (2026, May 28). <em>Software for spatially explicit capture–recapture</em>. https://www.otago.ac.nz/density/</p></li>
+</ol>
+<p><em>Presentation made with Quarto</em></p>
 
 </section></section>
     </div>
